@@ -1,0 +1,52 @@
+{% extends 'farmers/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% block css %}
+    <link rel='stylesheet' href="{% static 'css/user.css' %}">
+    <link rel='stylesheet' href="{% static 'css/user_dashboard.css' %}">
+    {% endblock %}
+    <title>{% block title %} FARM INSURE| PREMIUM PAYMENT  {% endblock %}</title>
+  </head>
+  <body>
+	  {% block content %}
+    <main id="main">
+      <h1>Create a Insurance Premium Payment Plan</h1>
+      <div class="carad-container">
+        <div class="payment-container">
+          <h1>Our Premium Payment Channels</h1>
+          <label for="name">Select Preferred Channel</label>
+          <select
+            >Different ways you can pay your Premium are
+            <option>Pay through your Bank Account</option>
+            <option>Pay with Mobile Money</option>
+            <option>Pay with mPESA</option>
+            <option>Pay with USSD</option>
+            <option></option>
+          </select>
+          <label for="name">Start Date</label>
+          <input
+            type="date"
+            name="carbrand"
+            placeholder="start date"
+            required
+          />
+          <label for="name">End Date</label>
+          <input type="date" name="carbrand" placeholder="End date" required />
+          <label for="name">Setup Standing Order</label>
+          <select
+            >Set up Standing Order
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <input type="submit" value="Submit" />
+        </div>
+      </div>
+	</main>
+	{% endblock %}
+  </body>
+</html>

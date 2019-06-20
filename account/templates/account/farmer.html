@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link href="{% static 'css/login.css' %}" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/">
+</head>
+
+<body>
+
+    <div class="d-flex justify-content-center align-items-center container ">
+
+        <div class="Sign-Up ">
+         <form action="" method="POST" novalidate>
+                {% csrf_token %}
+
+                {{ form.non_field_errors }}
+
+                {{ form.source.errors }}
+                {{ form.source }}
+
+            <table border="1">
+                    <tr>
+                        <th>{{ user_form.username.label_tag }}</th>
+                        <td>
+                                {{ user_form.username.errors }}
+                                {{ user_form.username }}
+                        </td>
+                    </tr>
+                    <tr>
+                            <th>{{ user_form.password1.label_tag }}</th>
+                            <td>
+                                    {{ user_form.password1.errors }}
+                                    {{ user_form.password1 }}
+                            </td>
+                    </tr>
+                    <tr>
+                            <th>{{ user_form.password2.label_tag }}</th>
+                            <td>
+                                    {{ user_form.password2.errors }}
+                                    {{ user_form.password2 }}
+                            </td>
+                    </tr>
+                    <tr>
+                            <th>{{ user_profile_form.first_name.label_tag }}</th>
+                            <td>
+                                    {{ user_form.first_name.errors }}
+                                    {{ user_form.first_name }}
+                            </td>
+                    </tr>
+                    <tr>
+                            <th>{{ user_profile_form.last_name.label_tag }}</th>
+                            <td>
+                                    {{ user_form.last_name.errors }}
+                                    {{ user_form.last_name }}
+                            </td>
+                    </tr>
+                    <tr>
+                            <th>{{ user_profile_form.phone_number.label_tag }}</th>
+                            <td>
+                                    {{ user_form.phone_number.errors }}
+                                    {{ user_form.phone_number}}
+                            </td>
+                    </tr>
+                    <tr>
+                            <th>{{ user_profile_form.email.label_tag }}</th>
+                            <td>
+                                    {{ user_form.email.errors }}
+                                    {{ user_form.email }}
+                            </td>
+                    </tr>
+                    <tr>
+                            <th>{{ user_profile_form.adress.label_tag }}</th>
+                            <td>
+                                    {{ user_form.adress.errors }}
+                                    {{ user_form.adress }}
+                            </td>
+                    </tr>
+
+                    
+                  </table>
+                
+               
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+
+                <!-- <div class="form-group">
+                        {% for field in user_form %}
+                        <div class="form-group m-form__group row_name">
+                                <label for="{{ field.name }}">{{ field.label|safe }}</label>
+                               {{ field }}
+                                <span class="m-form__help">{{ field.errors }}</span>
+                            </div>
+                        {% endfor %}  
+                </div>
+                <div class="form-group">
+                        {% for field in user_profile_form %}
+                        <div class="form-group m-form__group row_name">
+                                <label for="{{ field.name }}">{{ field.label|safe }}</label>
+                               {{ field }}
+                                <span class="m-form__help">{{ field.errors }}</span>
+                            </div>
+                        {% endfor %}  
+                </div> -->
+         </form>
+            
+
+            <!-- <form action="" method="POST">
+                    {% csrf_token %}
+                <div class="form-group">
+
+                <div class="row_name">
+                        <input type="text" class="form-control username" id="inputUserName"
+                            name="username" placeholder="Enter UserName" aria-labelledby="emailnotification">
+                    </div>
+
+                    <div class="row_name">                       
+                        <input type="password" class="form-control" id="inputPassword"
+                            aria-labelledby="passwordnotification" name="password1" placeholder="Enter Password">
+                    </div>
+                    
+                    <div class="row_name">                       
+                            <input type="password" class="form-control" id="inputPassword"
+                                aria-labelledby="passwordnotification" name="password2" placeholder="Enter Password">
+                    </div>
+        
+
+                    <div class="row name">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="first_name" placeholder="First name">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="last_name" placeholder="Last name">
+                        </div>
+                    </div>
+
+                    <div class="row email">
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" id="inputNumber" name="phone_number" placeholder="Phone Number">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="example@gmail.com">
+                            <small id="emailnotification" class="form-text text-muted">Enter Valid Email Id</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="inputAddress" name="adress" placeholder="Address">
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+                </div>
+            </form> -->
+        </div>
+        
+        
+</body>
+
+</html>

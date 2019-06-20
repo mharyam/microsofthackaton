@@ -1,0 +1,21 @@
+
+.signup-container {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+
+}
+
+.form-check-label {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.sign-in{
+    padding:170px;
+}

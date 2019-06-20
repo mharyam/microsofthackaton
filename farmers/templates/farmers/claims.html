@@ -1,0 +1,47 @@
+{% extends 'farmers/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block css %}
+    <link rel='stylesheet' href="{% static 'css/user.css' %}">
+    <link rel='stylesheet' href="{% static 'css/user_dashboard.css' %}">
+    {% endblock %}
+    <title>{% block title %} FARM INSURE| CLAIM {% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    <main id="main">
+        <h1>Report a Claim</h1>
+        <div class="claim-container">
+            <form action="">
+                <label for="name">Report a Claim</label>
+                <input type="text" name="carbrand" placeholder="Report a Claim" required>
+
+                <label for="year">Type of disaster</label>
+                <select name="type" required>
+                        <option value="new">Flooding</option>
+                        <option value="used">WildFire</option>
+                          <option value="used">Storm</option>
+                          <option value="used">Landslide</option>
+                </select>
+                <label for="name">Date of Occurence</label>
+                <input type="date" name="occurence" placeholder="enter date" required>
+                <label for="model">Upload Picture of Displaced farm</label>
+                <input type="file" name="pic" accept="image/*">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+
+   {% endblock %}
+</body>
+
+</html>

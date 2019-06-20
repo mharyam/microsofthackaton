@@ -1,0 +1,92 @@
+{% extends 'farmers/base.html' %}
+{% load static %}
+<title>{% block title %} FARM INSURE| DASHBOARD {% endblock %}</title>
+{% block css %}
+<link rel='stylesheet' href="{% static 'css/user_dashboard.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="main__cards">
+      <div class="card">
+        <div class="card__header">
+          <div class="card__header-title text-light">Your <strong>Premium History</strong>
+
+          </div>
+          <div class="settings">
+            <div class="settings__block"><i class="fas fa-edit"></i></div>
+            <div class="settings__block"><i class="fas fa-cog"></i></div>
+          </div>
+        </div>
+        <div class="card__main">
+          <div class="card__row">
+            <div class="card__icon"><i class="fas fa-gift"></i></div>
+            <div class="card__time">
+              <div>Wednesday</div>
+            </div>
+            <div class="card__detail">
+              <div class="card__source text-bold">19th June, 2019</div>
+              <div class="card__description">5000</div>
+              <div class="card__note">Balance =<strong> 20,000<strong></div>
+            </div>
+          </div>
+          <div class="card__row">
+            <div class="card__icon"><i class="fas fa-plane"></i></div>
+            <div class="card__time">
+              <div>Wednesday</div>
+            </div>
+            <div class="card__detail">
+              <div class="card__source text-bold">19th May, 2019</div>
+              <div class="card__description">5000</div>
+              <div class="card__note">Balance = <strong>15,000</strong></div>
+            </div>
+          </div>
+          <div class="card__row">
+            <div class="card__icon"><i class="fas fa-book"></i></div>
+            <div class="card__time">
+              <div>Wednesday</div>
+            </div>
+            <div class="card__detail">
+              <div class="card__source text-bold">19th April, 2019</div>
+              <div class="card__description">5000</div>
+              <div class="card__note">Balance = <strong>10,000</strong></div>
+            </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header">
+          <div class="card__header-title text-light">Premium <strong>Statements</strong>
+            <a href="#" class="card__header-link text-bold">View All</a>
+          </div>
+          <div class="settings">
+            <div class="settings__block"><i class="fas fa-edit"></i></div>
+            <div class="settings__block"><i class="fas fa-cog"></i></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="documents">
+            <div class="document">
+              <div class="document__img"></div>
+              <div class="document__title">June 2019</div>
+              <div class="document__date">19/07/2019</div>
+            </div>
+            <div class="document">
+              <div class="document__img"></div>
+              <div class="document__title">May 2019</div>
+              <div class="document__date">19/06/2019</div>
+            </div>
+            <div class="document">
+              <div class="document__img"></div>
+              <div class="document__title">April 2019</div>
+              <div class="document__date">19/05/2019</div>
+            </div>
+            <div class="document">
+              <div class="document__img"></div>
+              <div class="document__title">March 2019</div>
+              <div class="document__date">19/04/2019</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+{% endblock %}

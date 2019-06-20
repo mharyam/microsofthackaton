@@ -1,0 +1,63 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign Up as Coperative</title>
+    {% block css %}
+    <link  rel="stylesheet" href="{% static 'css/signup.css' %}"/>
+    <link  rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  {% endblock %}
+</head>
+
+<body>
+  {% block content %}
+  <div class="d-flex justify-content-center align-items-center signup-container form-class ">
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <input type="text" class="form-control name mt-5" id="inputName" placeholder="Name of Cooperative Society" required>
+        </div>
+        <div class="form-group col-md-12">
+          <input type="number" class="form-control mt-2" id="inputNumber" placeholder="Phone Number" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <input type="text" class="form-control mt-2" id="inputUserame" placeholder="Username" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <input type="email" class="form-control mt-2" id="inputEmail4" placeholder="Input Email">
+        </div>
+        <div class="form-group col-md-12">
+          <input type="password" class="form-control " id="inputPassword4" placeholder="Input Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control mt-2" id="inputAddress" placeholder="Input Address">
+
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Agree to Terms and Conditions
+          </label>
+        </div>
+      </div>
+      <!-- <button type="submit" class="btn btn-success col-md-12">Set Up my Account</button> -->
+      <a  class="btn btn-success col-md-12" href="{% url 'account:signin' %}">Set Up my Account</a>
+    </form>
+  </div>
+  {% endblock %}
+</body>
+
+</html>

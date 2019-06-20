@@ -1,0 +1,42 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign IN</title>
+    {% block css %}
+    <link  rel="stylesheet" href="{% static 'css/signup.css' %}"/>
+    <link  rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  {% endblock %}
+</head>
+
+<body>
+  {% block content %}
+  <div class="sign-in">
+  <div class="d-flex justify-content-center align-items-center signup-container">
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <input type="text" class="form-control-lg" id="inputUserame" pnlaceholder="Username" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <input type="password" class="form-control-lg" id="inputPassword4" placeholder="Input Password">
+        </div>
+    </div>
+      <!-- <button type="submit" class="btn btn-success col-md-12" href="{% url 'farmers:home' %}">SIGN IN </button> -->
+      <a  class="btn btn-success col-md-12" href="{% url 'farmers:home' %}">SIGN IN </a>
+    </form>
+  </div>
+</div>
+  {% endblock %}
+</body>
+
+
+</html>

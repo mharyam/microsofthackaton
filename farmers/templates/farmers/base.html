@@ -1,0 +1,138 @@
+
+{% load static %}
+<html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>FarmInsure</title>
+             {% block css %}
+             
+             {% endblock %}
+            <title>{% block title %} {% endblock %}</title>
+        </head>
+        
+    <body>
+        <div class="grid">
+          <header class="header">
+            <i class="fas fa-bars header__menu"></i>
+            <div class="header__search">
+              <input class="header__input" placeholder="Search..." />
+            </div>
+            <div class="header__avatar">
+              <div class="dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__list-item">
+                    <span class="dropdown__icon"><i class="far fa-user"></i></span>
+                    <span class="dropdown__title">my profile</span>
+                  </li>
+                  <li class="dropdown__list-item">
+                    <span class="dropdown__icon"><i class="fas fa-clipboard-list"></i></span>
+                    <span class="dropdown__title">my account</span>
+                  </li>
+                  <li class="dropdown__list-item">
+                    <span class="dropdown__icon"><i class="fas fa-sign-out-alt"></i></span>
+                    <span class="dropdown__title">log out</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+        
+          <aside class="sidenav">
+            <div class="sidenav__brand">
+              <i class="fas fa-feather-alt sidenav__brand-icon"></i>
+              <a class="sidenav__brand-link" href="#">Farm<span class="text-light">Insure</span></a>
+              <i class="fas fa-times sidenav__brand-close"></i>
+            </div>
+            <div class="sidenav__profile">
+              <div class="sidenav__profile-avatar"></div>
+              <div class="sidenav__profile-title text-light">Kofi
+         </div>
+            </div>
+            <div class="row row--align-v-center row--align-h-center">
+              <ul class="navList">
+        
+                  <li>
+                  <div class="navList__subheading row row--align-v-center">
+                    <span class="navList__subheading-icon"><i class="fas fa-briefcase-medical"></i></span>
+                    <span class="navList__subheading-title"><a href="{% url 'farmers:create_a_plan' %}">Create a plan</a></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="navList__subheading row row--align-v-center">
+                    <span class="navList__subheading-icon"><i class="fas fa-plane-departure"></i></span>
+                    <span class="navList__subheading-title"><a href="{% url 'farmers:premium_payment' %}">Premium payment</a></span>
+                  </div>
+                  <ul class="subList subList--hidden">
+                    <li class="subList__item">domestic</li>
+                    <li class="subList__item">foreign</li>
+                    <li class="subList__item">misc</li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="navList__subheading row row--align-v-center">
+                    <span class="navList__subheading-icon"><i class="far fa-angry"></i></span>
+                    <span class="navList__subheading-title"><a href="{% url 'farmers:claim' %}">Claims</a></span>
+                  </div>
+                  <ul class="subList subList--hidden">
+                    <li class="subList__item">current</li>
+                    <li class="subList__item">archives</li>
+                  </ul>
+                </li>
+          <li>
+            <div class="navList__subheading row row--align-v-center">
+              <span class="navList__subheading-icon"><i class="fas fa-plane-departure"></i></span>
+              <span class="navList__subheading-title"><a href="payment-page.html">Setup Monitor</a></span>
+            </div>
+            <ul class="subList subList--hidden">
+              <li class="subList__item">domestic</li>
+              <li class="subList__item">foreign</li>
+              <li class="subList__item">misc</li>
+            </ul>
+          </li>
+            <li>
+              <div class="navList__subheading row row--align-v-center">
+                <span class="navList__subheading-icon"><i class="fas fa-plane-departure"></i></span>
+                <span class="navList__subheading-title"><a href="payment-page.html">Loan Application</a></span>
+              </div>
+              <ul class="subList subList--hidden">
+                <li class="subList__item">domestic</li>
+                <li class="subList__item">foreign</li>
+                <li class="subList__item">misc</li>
+              </ul>
+            </li>
+        
+            </div>
+          </aside>
+        
+          <main class="main">
+            <div class="main-header">
+              <div class="main-header__intro-wrapper">
+                <div class="main-header__welcome">
+                  <div class="main-header__welcome-title text-light">Welcome, <strong>Kofi</strong></div>
+                  <div class="main-header__welcome-subtitle text-light">How are you today?</div>
+                </div>
+        
+                <div class="quickview">
+                  <div class="quickview__item">
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% block content %}
+
+            {% endblock %}
+            </main>
+          
+
+
+<footer class="footer">
+        <p><span class="footer__copyright">&copy;</span> 2019 Team Aza</p>
+        </footer>
+   
+      </div>
+    </body>
+    </html>
+                        

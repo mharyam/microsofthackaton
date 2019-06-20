@@ -1,0 +1,65 @@
+{% extends 'farmers/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css" rel="stylesheet">
+    {% block css %}
+    <link rel='stylesheet' href="{% static 'css/user.css' %}">
+    <link rel='stylesheet' href="{% static 'css/user_dashboard.css' %}">
+    {% endblock %}
+    <title>{% block title %} FARM INSURE| CREATE A PLAN  {% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    <main id="main">
+        <h1>Create a Insurance Plan</h1>
+        <div class="carad-container">
+            <h1 id='create-ad'> Create A Plan</h1>
+            <form action="">
+                <label for="name">Location of Farm</label>
+                <input type="text" name="carbrand" placeholder="Enter farm location" required>
+
+                <label for="year">Type of crop grown</label>
+                <select name="type" required>
+                        <option value="new">Food crops (tomato,vegetables )</option>
+                        <option value="used">Tubers (Yam, Potato, Cassava)</option>
+                          <option value="used">Grains (Rice, Wheat, Millet)</option>
+                </select>
+
+                <label for="type">Policy term</label>
+                <select name="cars">
+                        <option value="new">0-2 yrs</option>
+                        <option value="used">2 - 5 yrs</option>
+                        <option value="used">5 - 10 yrs</option>
+                </select>
+                <label for="model">Size of Farm(in Hectares)</label>
+                <input type="text" placeholder="Size of Farm(in Hectares)" required>
+
+                <label for="price">Estimated profit</label>
+                <input type="number" id="price" placeholder="Enter price" >
+
+                <label for="model">Upload Picture of Your Farm</label>
+                <input type="file" name="pic" accept="image/*">
+
+
+                <label for="name">Beneficiary's Name</label>
+                <input type="text" name="carbrand" placeholder="Name of Beneficiary" required>
+
+                <label for="name">Beneficiary's Phone Number</label>
+                <input type="text" name="carbrand" placeholder="Beneficiary's phone number" required>
+                <input type="submit" value="Generate plan">
+            </form>
+        </div>
+    </main>
+    {% endblock %}
+    <script src="js/script.js"></script>
+</body>
+
+</html>
